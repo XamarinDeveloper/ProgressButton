@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+     tags:
+       - "v*"
+
+jobs:
+  tagged-release:
+    name: "Release"
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Xamarin SDK
+      uses: maxim-lobanov/setup-xamarin@v1
+      with:
+        mono-version: latest
+        xamarin-android-version: latest
+
+    - name: Setup Java JDK
+      uses: actions/setup-java@v2.5.0
+      with:
+        java-version: '11'
+        distribution: 'microsoft'
+
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.x'
+
+    - name: Restore Dependencies
+      run: nuget restore ProgressButton/ProgressButton.csproj
+
+    - name: Build
+      run: msbuild ProgressButton/ProgressButton.csproj /p:Configuration=Release
+
+    - name: Automatic Release
+      uses: marvinpinto/action-automatic-releases@v1.2.1
+      with:
+        repo_token:  "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
+        files: |
+          ProgressButton/bin/Release/*.dll
+          ProgressButton/bin/Release/*.xml
