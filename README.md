@@ -37,10 +37,10 @@ protected override void OnCreate(Bundle savedInstanceState) {
     var myButton = FindViewById<MaterialButton>(Resource.Id.myButton);
     
     // bind your button to activity lifecycle
-    this.BindProgressButton(myButton)
+    this.BindProgressButton(myButton);
 
     // (Optional) Enable fade in/out animations 
-    myButton.AttachTextChangeAnimator()
+    myButton.AttachTextChangeAnimator();
 
     // Show progress with "Loading" text
     myButton.ShowProgress((progressParams) => {
@@ -49,7 +49,7 @@ protected override void OnCreate(Bundle savedInstanceState) {
     });
 
     // Hide progress and show "Submit" text instead
-    myButton.HideProgress(Resource.String.submit)
+    myButton.HideProgress(Resource.String.submit);
 }
 ```
 
@@ -73,7 +73,7 @@ button.ShowDrawable(animatedDrawable, (drawableParams) => {
 To avoid memory leaks you always need to bind your button to a LifecycleOwner (usually Activity, or Fragment):
 
 ```C#
-[ILifecycleOwner].BindProgressButton(button)
+[ILifecycleOwner].BindProgressButton(button);
 ```
 
 ### Author
