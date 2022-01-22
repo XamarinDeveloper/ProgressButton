@@ -1,0 +1,44 @@
+name: Publish NuGet Package
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  publish:
+    name: "Publish NuGet Package"
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Xamarin SDK
+      uses: maxim-lobanov/setup-xamarin@v1
+      with:
+        mono-version: latest
+        xamarin-android-version: latest
+
+    - name: Setup Java JDK
+      uses: actions/setup-java@v2.5.0
+      with:
+        java-version: '11'
+        distribution: 'microsoft'
+
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.x'
+
+    - name: Restore Dependencies
+      run: nuget restore ProgressButton/ProgressButton.csproj
+
+    - name: Build
+      run: msbuild ProgressButton/ProgressButton.csproj /p:Configuration=Release
+
+    - name: Create NuGet Package
+      run: nuget pack ProgressButton.nuspec
+      working-directory: ./ProgressButton
+      
+    - name: Publish NuGet Package
+      run: dotnet nuget push ProgressButton/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
