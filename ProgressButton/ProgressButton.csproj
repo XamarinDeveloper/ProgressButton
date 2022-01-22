@@ -63,9 +63,6 @@
     <Compile Include="TextChangeAnimatorParams.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\AboutResources.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
     <PackageReference Include="Xamarin.AndroidX.SwipeRefreshLayout">
       <Version>1.1.0.5</Version>
