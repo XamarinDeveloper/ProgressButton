@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+	<metadata>
+		<id>Ir.XamarinDev.Android.ProgressButton</id>
+		<version>1.0.0.1</version>
+		<title>Ir.XamarinDev.Android.ProgressButton</title>
+		<authors>XamarinCs</authors>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<license type="expression">MIT</license>
+		<!-- <icon>icon.png</icon> -->
+		<projectUrl>https://github.com/XamarinDeveloper/ProgressButton</projectUrl>
+		<description>Add progress animation to any button by adding a few lines of code without layout changes. Ported from https://github.com/razir/ProgressButton</description>
+		<releaseNotes>Initial Release</releaseNotes>
+		<copyright>Copyright © 2022</copyright>
+		<tags>Progress Button Xamarin Android</tags>
+		<dependencies>
+			<group targetFramework="MonoAndroid90">
+				<dependency id="Xamarin.AndroidX.AppCompat" version="1.2.0.5" />
+				<dependency id="Xamarin.AndroidX.SwipeRefreshLayout" version="1.1.0.5" />
+			</group>
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="bin/Release/Ir.XamarinDev.Android.ProgressButton.dll" target="lib/MonoAndroid90/Ir.XamarinDev.Android.ProgressButton.dll" />
+		<file src="bin/Release/Ir.XamarinDev.Android.ProgressButton.xml" target="lib/MonoAndroid90/Ir.XamarinDev.Android.ProgressButton.xml" />
+	</files>
+</package>
