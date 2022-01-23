@@ -1,14 +1,14 @@
 # Progress Button for Xamarin.Android - Ported from [this](https://github.com/razir/ProgressButton) library
 [![Release](https://img.shields.io/github/v/release/XamarinDeveloper/ProgressButton?color=FC0&display_name=tag&label=Release)](https://github.com/XamarinDeveloper/ProgressButton/releases)
-[![NuGet](https://img.shields.io/nuget/v/Ir.XamarinDev.Android.ProgressButton?label=NuGet)](https://www.nuget.org/packages/Ir.XamarinDev.Android.ProgressButton/)
+[![NuGet](https://img.shields.io/nuget/v/Ir.XamarinDev.Android.ProgressButton?label=NuGet)](https://nuget.org/packages/Ir.XamarinDev.Android.ProgressButton/)
 
-![basic progress button example](https://raw.githubusercontent.com/XamarinDeveloper/ProgressButton/main/Assets/ProgressEnd.gif)
+[![basic progress button example](https://raw.githubusercontent.com/XamarinDeveloper/ProgressButton/main/Assets/ProgressEnd.gif)](#)
 
-![progress cebter button example](https://raw.githubusercontent.com/XamarinDeveloper/ProgressButton/main/Assets/ProgressCenter.gif)
+[![progress cebter button example](https://raw.githubusercontent.com/XamarinDeveloper/ProgressButton/main/Assets/ProgressCenter.gif)](#)
 
-![mixed progress button example](https://raw.githubusercontent.com/XamarinDeveloper/ProgressButton/main/Assets/MixedBehaviour.gif)
+[![mixed progress button example](https://raw.githubusercontent.com/XamarinDeveloper/ProgressButton/main/Assets/MixedBehaviour.gif)](#)
 
-#### Article on ProAndroidDev.com explaining how it works (in kotlin) : [here](https://proandroiddev.com/replace-progressdialog-with-a-progress-button-in-your-app-14ed1d50b44)
+#### Article on ProAndroidDev.com explaining how it works (in kotlin): [here](https://proandroiddev.com/replace-progressdialog-with-a-progress-button-in-your-app-14ed1d50b44)
 
 
 #### Add progress animation to any button by adding a few lines of code without layout changes
@@ -55,7 +55,7 @@ protected override void OnCreate(Bundle savedInstanceState) {
 
 ### Showing AnimatedDrawable
 
-![animated drawable button example](https://raw.githubusercontent.com/XamarinDeveloper/ProgressButton/main/Assets/AnimatedDrawable.gif)
+[![animated drawable button example](https://raw.githubusercontent.com/XamarinDeveloper/ProgressButton/main/Assets/AnimatedDrawable.gif)](#)
 
 ```C#
 var animatedDrawable = ContextCompat.GetDrawable(this, Resource.Drawable.animated_check);
