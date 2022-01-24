@@ -76,6 +76,9 @@ To avoid memory leaks you always need to bind your button to a LifecycleOwner (u
 [ILifecycleOwner].BindProgressButton(button);
 ```
 
+### License 
+GPL v3.0
+
 ### Author
 XamarinDev
 
